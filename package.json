@@ -10,7 +10,7 @@
     "release": "node ./scripts/release.mjs"
   },
   "devDependencies": {
-    "eslint": "^8.48.0",
+    "eslint": "^9.17.0",
     "stylelint": "^16.12.0",
     "markdownlint-cli": "^0.43.0",
     "rollup": "^4.29.1",
