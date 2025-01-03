@@ -4,6 +4,16 @@ import fs from 'node:fs/promises';
 
 const execAsync = promisify(exec);
 
+async function tagExists(tagName) {
+  try {
+    // Check if the tag exists
+    await execAsync(`git show-ref --tags --quiet --verify refs/tags/${tagName}`);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 async function release() {
   try {
     console.log('Building the project...');
@@ -18,9 +28,16 @@ async function release() {
     // Read the new version from package.json
     const pkg = JSON.parse(await fs.readFile('./package.json', 'utf8'));
     const newVersion = pkg.version;
+    const tagName = `v${newVersion}`;
 
-    console.log(`Creating git tag for version ${newVersion}...`);
-    await execAsync(`git tag v${newVersion}`);
+    console.log(`Checking if tag ${tagName} exists...`);
+    // Create the tag only if it doesn't exist
+    if (!(await tagExists(tagName))) {
+      console.log(`Creating git tag for version ${newVersion}...`);
+      await execAsync(`git tag ${tagName}`);
+    } else {
+      console.log(`Tag ${tagName} already exists. Skipping tag creation.`);
+    }
 
     console.log('Pushing changes and tags...');
     await execAsync('git push && git push --tags');
