@@ -1,0 +1,19 @@
+{
+  "name": "web-components-boilerplate",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/my-component.js",
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "eslint ./src && stylelint '**/*.css' && markdownlint .",
+    "test": "vitest run",
+    "release": "node ./scripts/release.mjs"
+  },
+  "devDependencies": {
+    "eslint": "^8.48.0",
+    "stylelint": "^15.10.0",
+    "markdownlint-cli": "^0.33.0",
+    "rollup": "^3.29.0",
+    "vitest": "^0.34.0"
+  }
+}
