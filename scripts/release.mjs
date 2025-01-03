@@ -23,17 +23,14 @@ async function release() {
     await execAsync('npm test');
 
     console.log('Bumping version...');
-    await execAsync('npm version patch'); // Bumps the version (patch, minor, or major)
+    const { stdout: newVersionOutput } = await execAsync('npm version patch'); // Bumps the version
+    const newVersion = newVersionOutput.trim(); // Extracts the new version tag (e.g., "v1.0.2")
 
-    // Read the new version from package.json
-    const pkg = JSON.parse(await fs.readFile('./package.json', 'utf8'));
-    const newVersion = pkg.version;
-    const tagName = `v${newVersion}`;
+    const tagName = newVersion.startsWith('v') ? newVersion : `v${newVersion}`;
 
     console.log(`Checking if tag ${tagName} exists...`);
-    // Create the tag only if it doesn't exist
     if (!(await tagExists(tagName))) {
-      console.log(`Creating git tag for version ${newVersion}...`);
+      console.log(`Creating git tag for version ${tagName}...`);
       await execAsync(`git tag ${tagName}`);
     } else {
       console.log(`Tag ${tagName} already exists. Skipping tag creation.`);
@@ -45,7 +42,7 @@ async function release() {
     console.log('Publishing to NPM...');
     await execAsync('npm publish');
 
-    console.log(`Release v${newVersion} completed successfully!`);
+    console.log(`Release ${tagName} completed successfully!`);
   } catch (err) {
     console.error('Release process failed:', err.message);
     process.exit(1);
