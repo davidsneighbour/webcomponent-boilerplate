@@ -1,4 +1,3 @@
 {
-  "default": true,
-  "line-length": false
+	"extends": "@davidsneighbour/markdownlint-config"
 }
