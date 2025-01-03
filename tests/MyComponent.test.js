@@ -1,3 +1,4 @@
+// testing for Javascript code
 import { describe, it, expect } from 'vitest';
 
 describe('MyComponent', () => {
