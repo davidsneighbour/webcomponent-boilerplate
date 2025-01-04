@@ -6,9 +6,9 @@ const execAsync = promisify(exec);
 
 async function tagExists(tagName) {
   try {
-    // Check if the tag exists
-    await execAsync(`git show-ref --tags --quiet --verify refs/tags/${tagName}`);
-    return true;
+    const { stdout } = await execAsync('git tag');
+    const tags = stdout.split('\n').map((tag) => tag.trim());
+    return tags.includes(tagName);
   } catch {
     return false;
   }
