@@ -4,7 +4,7 @@
   "dependencies": {
     "@davidsneighbour/markdownlint-config": "^2024.4.12",
     "@rollup/plugin-terser": "^0.4.4",
-    "postcss-html": "^1.7.0",
+    "postcss-html": "^1.8.0",
     "stylelint-config-standard": "^36.0.1"
   },
   "devDependencies": {
