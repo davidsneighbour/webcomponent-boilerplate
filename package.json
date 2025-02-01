@@ -2,7 +2,7 @@
   "name": "web-components-boilerplate",
   "version": "1.0.6",
   "dependencies": {
-    "@davidsneighbour/markdownlint-config": "^2024.4.12",
+    "@davidsneighbour/markdownlint-config": "^2025.0.1",
     "@rollup/plugin-terser": "^0.4.4",
     "postcss-html": "^1.7.0",
     "stylelint-config-standard": "^36.0.1"
