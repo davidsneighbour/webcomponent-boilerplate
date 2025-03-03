@@ -2,18 +2,18 @@
   "name": "web-components-boilerplate",
   "version": "1.0.6",
   "dependencies": {
-    "@davidsneighbour/markdownlint-config": "^2024.4.12",
+    "@davidsneighbour/markdownlint-config": "^2025.0.2",
     "@rollup/plugin-terser": "^0.4.4",
-    "postcss-html": "^1.7.0",
-    "stylelint-config-standard": "^36.0.1"
+    "postcss-html": "^1.8.0",
+    "stylelint-config-standard": "^37.0.0"
   },
   "devDependencies": {
-    "eslint": "^9.17.0",
-    "jsdom": "^25.0.1",
-    "markdownlint-cli": "^0.43.0",
-    "rollup": "^4.29.1",
-    "stylelint": "^16.12.0",
-    "vitest": "^2.1.8"
+    "eslint": "^9.21.0",
+    "jsdom": "^26.0.0",
+    "markdownlint-cli": "^0.44.0",
+    "rollup": "^4.34.9",
+    "stylelint": "^16.15.0",
+    "vitest": "^3.0.7"
   },
   "scripts": {
     "build": "rollup -c",
