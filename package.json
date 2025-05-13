@@ -5,7 +5,7 @@
     "@davidsneighbour/markdownlint-config": "^2025.1.1",
     "@rollup/plugin-terser": "^0.4.4",
     "postcss-html": "^1.8.0",
-    "stylelint-config-standard": "^37.0.0"
+    "stylelint-config-standard": "^38.0.0"
   },
   "devDependencies": {
     "eslint": "^9.24.0",
