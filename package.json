@@ -2,7 +2,7 @@
   "name": "web-components-boilerplate",
   "version": "1.0.6",
   "dependencies": {
-    "@davidsneighbour/markdownlint-config": "^2025.1.1",
+    "@davidsneighbour/markdownlint-config": "^2025.3.6",
     "@rollup/plugin-terser": "^0.4.4",
     "postcss-html": "^1.8.0",
     "stylelint-config-standard": "^37.0.0"
@@ -10,7 +10,7 @@
   "devDependencies": {
     "eslint": "^9.24.0",
     "jsdom": "^26.0.0",
-    "markdownlint-cli": "^0.44.0",
+    "markdownlint-cli": "^0.47.0",
     "rollup": "^4.39.0",
     "stylelint": "^16.17.0",
     "vitest": "^3.1.1"
