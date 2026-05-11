@@ -1,7 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>davidsneighbour/renovate-config",
+    "customManagers:biomeVersions",
+    "github>dnbhq/renovate-config",
     ":disableDependencyDashboard"
   ]
 }
