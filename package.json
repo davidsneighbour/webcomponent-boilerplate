@@ -1,8 +1,7 @@
 {
-  "name": "web-components-boilerplate",
+  "name": "@davidsneighbour/web-components-boilerplate",
   "version": "1.0.6",
   "dependencies": {
-    "@davidsneighbour/markdownlint-config": "2026.0.4",
     "@rollup/plugin-terser": "1.0.0",
     "postcss-html": "1.8.1",
     "stylelint-config-standard": "40.0.0"
