@@ -7,7 +7,7 @@
     "stylelint-config-standard": "40.0.0"
   },
   "devDependencies": {
-    "eslint": "10.3.0",
+    "eslint": "10.6.0",
     "jsdom": "29.1.1",
     "markdownlint-cli": "0.48.0",
     "rollup": "4.60.3",
